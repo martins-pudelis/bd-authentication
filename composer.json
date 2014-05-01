@@ -1,0 +1,23 @@
+{
+    "name": "bd/bd-authentication",
+    "type": "library",
+    "description": "Authentication module for Bd",
+    "keywords": ["bd", "authentication"],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "authors": [
+        {
+            "name": "Martins Pudelis",
+            "email": "martins.pudelis@wallcity.lv"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "BdAuthentication": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
