@@ -10,6 +10,8 @@ class IndexController extends AbstractActionController
     {
         $this->layout('layout/authentication-layout');
 
+        $this->getServiceLocator()->get('AuthService');
+
         return array(
             'loginForm' => $this->getServiceLocator()->get('bd_login_form')
         );

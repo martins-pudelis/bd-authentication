@@ -24,6 +24,15 @@ return array(
         ),
     ),
 
+    'service_manager' => array(
+        'aliases' => array(
+            'AuthService' => 'BdAuthentication\Service\AuthService',
+        ),
+        'factories' => array(
+            'BdAuthentication\Service\AuthService' => 'BdAuthentication\Service\AuthServiceFactory',
+        )
+    ),
+
     'router' => array(
         'routes' => array(
             'bd_authentication_login' => array(
