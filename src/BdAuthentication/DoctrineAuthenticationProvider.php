@@ -42,6 +42,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
         $authenticationHistoryClass,
         $passwordRecoveryRequestClass
     ) {
+
         $this->entityManager = $entityManager;
         $this->authenticationDataProvider = new GenericDoctrineProvider($entityManager, $authenticationDataEntityClass);
         $this->authenticationHistoryProvider = new GenericDoctrineProvider($entityManager, $authenticationHistoryClass);
@@ -115,7 +116,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function getNewAuthenticationData()
     {
-        $this->authenticationDataProvider->getNew();
+        return $this->authenticationDataProvider->getNew();
     }
 
     /**
@@ -123,7 +124,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function getNewPasswordRecoveryRequest()
     {
-        $this->passwordRecoveryProvider->getNew();
+        return $this->passwordRecoveryProvider->getNew();
     }
 
     /**
@@ -131,7 +132,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function getNewAuthenticationHistory()
     {
-        $this->authenticationHistoryProvider->getNew();
+        return $this->authenticationHistoryProvider->getNew();
     }
 
     /**
@@ -139,7 +140,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAllAuthenticationData()
     {
-        $this->authenticationDataProvider->findAll();
+        return $this->authenticationDataProvider->findAll();
     }
 
     /**
@@ -147,7 +148,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAllPasswordRecoveryRequests()
     {
-        $this->passwordRecoveryProvider->findAll();
+        return $this->passwordRecoveryProvider->findAll();
     }
 
     /**
@@ -155,7 +156,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAllAuthenticationHistory()
     {
-        $this->authenticationHistoryProvider->findAll();
+        return $this->authenticationHistoryProvider->findAll();
     }
 
     /**
@@ -164,7 +165,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAuthenticationDataBy(array $criteria)
     {
-        $this->authenticationDataProvider->findBy($criteria);
+        return $this->authenticationDataProvider->findBy($criteria);
     }
 
     /**
@@ -173,7 +174,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAuthenticationHistoryBy(array $criteria)
     {
-        $this->authenticationHistoryProvider->findBy($criteria);
+        return $this->authenticationHistoryProvider->findBy($criteria);
     }
 
     /**
@@ -182,7 +183,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAllPasswordRecoveryRequestBy(array $criteria)
     {
-        $this->passwordRecoveryProvider->findBy($criteria);
+        return $this->passwordRecoveryProvider->findBy($criteria);
     }
 
     /**
@@ -191,7 +192,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAuthenticationData($id)
     {
-        $this->authenticationDataProvider->find($id);
+        return $this->authenticationDataProvider->find($id);
     }
 
     /**
@@ -200,7 +201,7 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findAuthenticationHistory($id)
     {
-        $this->authenticationHistoryProvider->find($id);
+        return $this->authenticationHistoryProvider->find($id);
     }
 
     /**
@@ -209,6 +210,6 @@ class DoctrineAuthenticationProvider implements AuthenticationProviderInterface
      */
     public function findPasswordRecoveryRequest($id)
     {
-        $this->passwordRecoveryProvider->find($id);
+        return $this->passwordRecoveryProvider->find($id);
     }
 }

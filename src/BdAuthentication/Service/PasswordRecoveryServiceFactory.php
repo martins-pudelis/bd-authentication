@@ -11,12 +11,12 @@ use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use BdAuthentication\Exception;
 
-class AuthServiceFactory implements FactoryInterface
+class PasswordRecoveryServiceFactory implements FactoryInterface
 {
     /**
      * @param ServiceLocatorInterface $serviceManager
      * @throws Exception\RuntimeException
-     * @return AuthenticationService
+     * @return PasswordRecoveryService
      */
     public function createService(ServiceLocatorInterface $serviceManager)
     {
@@ -32,8 +32,8 @@ class AuthServiceFactory implements FactoryInterface
             PasswordRecoveryRequest::CN()
         );
 
-        $authenticationService = new AuthService($doctrineAuthenticationProvider, $serviceManager);
+        $passwordRecoveryService = new PasswordRecoveryService($doctrineAuthenticationProvider, $serviceManager);
 
-        return $authenticationService;
+        return $passwordRecoveryService;
     }
 }

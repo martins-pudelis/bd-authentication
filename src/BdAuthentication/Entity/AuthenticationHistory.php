@@ -51,4 +51,84 @@ class AuthenticationHistory extends Entity implements AuthenticationHistoryInter
      * @var string
      */
     protected $browserSignature;
+
+    /**
+     * @param string $browserSignature
+     */
+    public function setBrowserSignature($browserSignature)
+    {
+        $this->browserSignature = $browserSignature;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBrowserSignature()
+    {
+        return $this->browserSignature;
+    }
+
+    /**
+     * @param string $insertDate
+     */
+    public function setInsertDate($insertDate)
+    {
+        $this->insertDate = $insertDate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInsertDate()
+    {
+        return $this->insertDate;
+    }
+
+    /**
+     * @param string $ip
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIp()
+    {
+        return $this->ip;
+    }
+
+    /**
+     * @param string $result
+     */
+    public function setResult($result)
+    {
+        $this->result = $result;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * @param \BdUser\Entity\User $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return \BdUser\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
