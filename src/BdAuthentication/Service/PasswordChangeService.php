@@ -200,6 +200,4 @@ class PasswordChangeService implements EventManagerAwareInterface
     {
         $this->flashMessenger = $flashMessenger;
     }
-
-
 }
